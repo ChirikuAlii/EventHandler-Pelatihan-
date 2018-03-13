@@ -10,7 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtA,scoreA, txtB , scoreB ;
     Button upA,downA , upB , downB;
-    int i=0;
+    int valueScoreA=0;
+    int valueScoreB=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         upA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i++;
-                scoreA.setText(""+i);
+                valueScoreA++;
+                scoreA.setText(""+valueScoreA);
             }
         });
 
@@ -43,28 +44,28 @@ public class MainActivity extends AppCompatActivity {
         downA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i--;
-                scoreA.setText(""+i);
+                valueScoreA--;
+                scoreA.setText(""+valueScoreA);
             }
         });
 
 
         //button up B di tekan maka socre nambah 1
-        upA.setOnClickListener(new View.OnClickListener() {
+        upB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i++;
-                scoreB.setText(""+i);
+                valueScoreB++;
+                scoreB.setText(""+valueScoreB);
             }
         });
 
 
         //button downB di tekan maka score berkurang 1
-        downA.setOnClickListener(new View.OnClickListener() {
+        downB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i--;
-                scoreB.setText(""+i);
+                valueScoreB--;
+                scoreB.setText(""+valueScoreB);
             }
         });
 
